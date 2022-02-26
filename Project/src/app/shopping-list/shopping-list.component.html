@@ -1,0 +1,5 @@
+<app-shopping-list-edit></app-shopping-list-edit>
+
+<div class="list-group-item" style="cursor: pointer" *ngFor="let ingredient of ingredientList" (click)="ingredientSelected(ingredient)" >
+  {{ingredient.name}} - ({{ingredient.amount}})
+</div>

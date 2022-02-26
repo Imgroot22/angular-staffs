@@ -1,0 +1,11 @@
+1. shopping-list-edit.. td method..
+
+2. Vallidation.. name and number required disable button
+ add pattern > 1 using RE 
+
+3. on EditItemnew Subject to pass id to edit shopping (if onclick on element in shopping list allow to edit it.. ex: on clicking apple(4))
+
+
+4. reset form after updating or insering
+
+5. delete ...

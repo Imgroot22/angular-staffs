@@ -1,0 +1,26 @@
+<h5>Hello, I'm servers component</h5>
+<h6>service name</h6>
+<input class="form-control" (input) = "onInputServiceName($event)"/>
+<hr>
+<p>{{serviceName}}</p>
+<button class="btn btn-primary" (click)="onClickService()"  >Add service</button>
+<app-service></app-service>
+<app-service></app-service>
+<app-service></app-service>
+<hr>
+<hr>
+<input class="form-control" [(ngModel)]="username">
+<button class="btn btn-success" (click)="onResetUser()" [disabled]="username.trim() === ''" >Reset User</button>
+<h1>{{ username }}</h1>
+<br>
+<br>
+<hr>
+<button class="btn btn-success" (click) = "onClickedToggle()"> <span *ngIf="toggle" >hide</span> <span *ngIf="!toggle" >show</span> details</button>
+<span *ngIf="toggle" >password is "Yogesh..."</span>
+<hr>
+<h6>LOG..</h6>
+<p *ngFor="let l of log" [ngStyle]="{backgroundColor: (l > 5 )?'red':''}" [ngClass] = "{whiteColor: l > 5}"  >clicked button --> {{ l }}</p>
+<hr>
+<br>
+<hr>
+<p *ngFor="let l of logTime; let i = index" [ngStyle]="{backgroundColor: (i >= 2 )?'blue':''}" [ngClass] = "{whiteColor: i >= 2}"  >clicked button --> {{ l }}</p>

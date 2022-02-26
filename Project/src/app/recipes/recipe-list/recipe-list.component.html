@@ -1,0 +1,4 @@
+<button class="btn btn-success" (click)='onNewRecipe()' >New Recipe </button>
+<div class="list-group" *ngFor="let recipe of recipeList; let id=index;">
+  <app-recipe-items [recipe]='recipe' [id]='id' ></app-recipe-items>
+</div>

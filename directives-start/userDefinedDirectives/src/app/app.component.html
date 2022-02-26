@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+      <br><br>
+      <ul class="list-group" *unless="onlyOdd">
+        <li class="list-group-item" simpleDirective *ngFor="let even of evenNumbers">
+          {{even}}
+        </li>
+      </ul>
+      <ng-template [ngIf]="onlyOdd">
+        <ul class="list-group">
+          <li class="list-group-item" appBasicCorrectWay inizialColor="green" hoverColor="yellow" *ngFor="let odd of oddNumbers">
+            {{odd}}
+          </li>
+        </ul>
+      </ng-template>
+      <hr>
+      <h1>ng switch</h1>
+      <div class="bg-red" [ngSwitch]="switchChoose" >
+        <p *ngSwitchCase="10" >10, you are selected.</p>
+        <p *ngSwitchCase="100" >100, you are selected.</p>
+        <p *ngSwitchCase="1000" >1000, you are selected.</p>
+        <p *ngSwitchCase="10000" >10000, you are selected.</p>
+        <p *ngSwitchDefault >some one else got selected(default).</p>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
